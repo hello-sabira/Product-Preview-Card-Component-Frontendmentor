@@ -1,0 +1,203 @@
+ @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+ :root {
+    --main-font: "Montserrat", sans-serif;
+    --secondary-font: "Fraunces", serif;
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+    box-sizing: border-box;
+    background-color: var(--cream);
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+  main, .product-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    min-height: 100vh;
+  }
+
+  .product-card {
+    max-width: 600px;
+    flex-direction: row;
+  }
+
+  .product-card .perfume-image img{
+    display: block;
+    width: 300px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    filter: brightness(90%);
+  }
+
+  .product-card .product-info {
+    background-color: var(--white);
+    padding: 1.05em 2em;
+    width: 50%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .product-label {
+    color: var(--dark-grayish-blue);
+    font-family: var(--main-font);
+    letter-spacing: 0.4em;
+    font-size: 0.75em;
+  }
+
+  .product-name {
+    color: var(--very-dark-blue);
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    line-height: 0.9;
+  }
+
+  .product-description {
+    margin-bottom: 0;
+  }
+
+  .product-description, .old-price {
+    color: var(--dark-grayish-blue);
+    font-family: var(--main-font);
+    font-size: 0.82em;
+    line-height: 1.8;
+  }
+
+  .old-price {
+    text-decoration:line-through;
+
+  }
+
+  .product-price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+  }
+
+  .current-price {
+    color: var(--dark-cyan);
+    font-family: var(--secondary-font);
+    font-size: 2em;
+    margin: 1.2em 0;
+  }
+
+  .shopping-icon {
+    margin-bottom: -3px;
+    margin-right: 5px;
+   width: 15px;
+  }
+
+  .product-cta {
+    width: 100%;
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 10px;
+    padding: 0.9em;
+    margin-bottom: 0.75em;
+    color: var(--white);
+    font-family: var(--main-font);
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .product-cta:hover {
+    background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+  }
+
+  /** Media Query **/
+
+  @media screen and (max-width: 600px) {
+ .product-card {
+    flex-direction: column;
+    width: 300px;
+  }
+  .product-card .perfume-image img{
+    display: block;
+    min-width: 300px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+  }
+
+  .product-card .product-info {
+    padding: 0.5em 1.6em;
+    width: 250px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .product-label {
+    letter-spacing: 0.3em;
+    font-size: 0.6em;
+  }
+
+  .product-name {
+    font-size: 1.5em;
+    line-height: 1;
+  }
+
+  .product-description {
+    margin-bottom: 0;
+
+  }
+
+  .product-description, .old-price {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  .product-price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+  }
+
+  .current-price {
+    color: var(--dark-cyan);
+    font-family: var(--secondary-font);
+    font-size: 2em;
+    margin: 0.5em 0;
+  }
+
+  .shopping-icon {
+    margin-bottom: -3px;
+    margin-right: 5px;
+   width: 15px;
+  }
+
+  .product-cta {
+    width: 100%;
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 10px;
+    padding: 0.9em;
+    margin-bottom: 0.75em;
+    color: var(--white);
+    font-family: var(--main-font);
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  }
